@@ -16,7 +16,7 @@
             <button class="btn btn-dark"><a href="high-scores.html" alt="highscore link" class="text-light">view high scores</a></button>
         </div>
         <div id="countdown" class="col-1 text-right">
-            <div class="counter"> </div>
+            Time: <span id="counter"> </span>
         </div>
     </header>
 
@@ -27,15 +27,16 @@
             </h1>
             <p id="quiz-description">Can you answer all the questions correctly in 60 seconds?<br>If you answer incorrectly, you'll lose time!</p>
             <button type="button" id="start-btn" class="btn btn-primary center">Let's Go!</button>
+            
             <div id="quiz-content" class="invisible">
-                <h2 id="card-header" class="display-6">
+                <h2 id="question" class="display-6">
                 Question
                 </h2>
-                <div id="answers" class="card row">
-                <button id="answer" class="btn">Answer</button>
-                <button id="answer" class="btn">Answer</button>
-                <button id="answer" class="btn">Answer</button>
-                <button id="answer" class="btn">Answer</button>
+                <div id="answers" class="card row g-2">
+                <button id="answer-1" class="btn btn-outline-primary">Answer</button>
+                <button id="answer-2" class="btn btn-outline-primary">Answer</button>
+                <button id="answer-3" class="btn btn-outline-primary">Answer</button>
+                <button id="answer-4" class="btn btn-outline-primary">Answer</button>
                 </div> 
                 
             </div>   
