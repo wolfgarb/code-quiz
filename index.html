@@ -32,11 +32,11 @@
                 <h2 id="question" class="display-6">
                 Question
                 </h2>
-                <div id="answers" class="card row g-2">
-                <button id="answer-1" class="btn btn-outline-primary answer">Answer</button>
-                <button id="answer-2" class="btn btn-outline-primary answer">Answer</button>
-                <button id="answer-3" class="btn btn-outline-primary answer">Answer</button>
-                <button id="answer-4" class="btn btn-outline-primary answer">Answer</button>
+                <div id="answers" class="card col-8 mx-auto">
+                <button id="answer-1" class="btn btn-outline-primary answer">Answer</button><br>
+                <button id="answer-2" class="btn btn-outline-primary answer">Answer</button><br>
+                <button id="answer-3" class="btn btn-outline-primary answer">Answer</button><br>
+                <button id="answer-4" class="btn btn-outline-primary answer">Answer</button><br>
                 </div> 
                 
             </div>   
@@ -45,11 +45,17 @@
         <div id="result" class="alert">
             <!-- blank space for right or wrong to pop up during quiz -->
         </div> 
+        
         <div id="player-input" class="invisible">
         <label for="player-name" class="form-label">Enter your initials</label>  
-        <input id="player-name" type="text">
-                <button type="submit" class="btn btn-dark">Submit!</button>
-        </input>
+            <input id="player-name" type="text"> 
+                <!-- blank space to visualize where input form is -->
+            </input>
+            <button type="submit" id="submit" class="btn btn-dark">
+                <a href="high-scores.html">
+                Submit!
+                </a>
+            </button>
         </div>
 
         

@@ -1,34 +1,34 @@
 var questions = [
-    {question: "What is 2 + 2?",
-    answers: ["$", "5", "4", "0"],
-    correct: "4"
-    },
     {question: "What is the proper command for creating a new file using the CLI?",
-    answers:["x", "touch ___", "mkdir ___", "please ___"],
+    answers:["git branch ___", "touch ___", "mkdir ___", "please ___"],
     correct: "touch ___"
     },
     {question: "What is wireframing?",
-    answers: ["A cheap way to build a house", "x", "The practice of sketching an outline of a page's layout", "x"],
+    answers: ["A cheap way to build a house", "Writing the html files first", "The practice of sketching an outline of a page's layout", "The practice of laying out the CSS page"],
     correct: "The practice of sketching an outline of a page's layout"
     },
     {question: "Why is camelcasing used in JS?",
-    answers: ["x", "JS cannot interpret hypens", "JS has a smoking problem", "x"],
+    answers: ["JS is outdated", "JS cannot interpret hypens", "JS has a smoking problem", "It improves legibility"],
     correct: "JS cannot interpret hypens"
     },
     {question: "Which method saves data to localStorage?",
-    answers: ["localStorage.setItem()", "method man", "x", "x"],
+    answers: ["localStorage.setItem()", "method-man()", "localStorage.getItem()", "$('localStorage')"],
     correct: "localStorage.setItem()"
     },
     {question: "What is the benefit of using console.log()?",
-    answers: ["So the computer can write in it's diary like in Star Trek", "x", "x", "To ensure your code is coming along"],
+    answers: ["So the computer can write in it's diary like in Star Trek", "To save data to local storage", "To save your progress with Git", "To ensure your code is coming along"],
     correct: "To ensure your code is coming along"
+    },
+    {question: "What is 2 + 2?",
+    answers: ["$", "5", "4", "0"],
+    correct: "4"
     }
 ]
 
 var questionLog = 0;
 var playerScore = 0;
 var timer, counter = 60;
-var highScore = localStorage.getItem("highscore");
+
 
 function showQuestion() {
     $("#question").text(questions[questionLog].question)
@@ -51,17 +51,21 @@ function endGame() {
 }
 }
 
-$("#submit").on("click", function() {
-    if ($("#player-name").val() === "") {
-        alert("please make a valid entry before submitting!");
-    } else {
-        window.location="code-quiz/high-scores.html";
-    }
+// targeting the submit click to save player name/initials to local storage
+    $("#submit").on("click", function() {
+        var playerName = $("#player-name").val();
+        localStorage.setItem(playerName, playerScore);
+    
+       localStorage.getItem(playerName, playerScore)
+       $("#score-name.li").append(playerName)
+    });
+
+$("#delete").on("click", function() {
+    localStorage.clear();
 })
 
 
 function countdown() {
-    
     $("#counter").text(counter);
     timer = setInterval(function() {
         counter--;
@@ -105,4 +109,8 @@ $("#start-btn").on("click", function() {
     startQuiz();
     countdown();
 });
+
+
+// get data from local storage and upload to high-scores.html
+
 
