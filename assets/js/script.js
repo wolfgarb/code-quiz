@@ -28,6 +28,7 @@ var questions = [
 var questionLog = 0;
 var playerScore = 0;
 var timer, counter = 60;
+var player = {};
 
 
 function showQuestion() {
@@ -55,16 +56,16 @@ function endGame() {
     $("#submit").on("click", function() {
         var playerName = $("#player-name").val();
         localStorage.setItem(playerName, playerScore);
-    
-       localStorage.getItem(playerName, playerScore)
-       $("#score-name.li").append(playerName)
+        loadScores();
     });
+
+
 
 $("#delete").on("click", function() {
     localStorage.clear();
 })
 
-
+// countdown function
 function countdown() {
     $("#counter").text(counter);
     timer = setInterval(function() {
@@ -112,5 +113,6 @@ $("#start-btn").on("click", function() {
 
 
 // get data from local storage and upload to high-scores.html
+
 
 
