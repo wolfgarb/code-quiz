@@ -21,7 +21,7 @@ Here is a mock-up of how the page looks and functions.
 Built entirely from scratch, I created a quiz page with a dynamic interface that allows user interaction and input. Once the quiz begins, the timer starts, and the user will lose points if they answer incorrectly! Once the quiz has ended or time runs out, they may enter their initials, and their initials are saved along with their high score. Feedback and improvements are always welcome, thanks for looking!
 
 ## Website
-https://wolfgarb.github.io/coffee-stain/
+https://wolfskillobyte.github.io/coffee-stain/
 
 ## Contribution
-Made by wolfgarb
+Made by wolfskillobyte
